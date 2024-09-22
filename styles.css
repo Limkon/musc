@@ -27,8 +27,7 @@ h1 {
 }
 
 .hole.mole {
-    background-image: url('mole.png');
-    background-size: cover;
+    background-color: #FFD700; /* 用黄色表示地鼠出现 */
 }
 
 #startButton {
