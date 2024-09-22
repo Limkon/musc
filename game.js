@@ -69,7 +69,9 @@ function checkDirection(row, col, rowInc, colInc) {
     return count === 5;
 }
 
-resetButton.addEventListener("click", () => {
+resetButton.addEventListener("click", resetGame);
+
+function resetGame() {
     gameState = Array(15).fill(null).map(() => Array(15).fill(null));
     currentPlayer = "X";
     statusText.textContent = "轮到玩家 X";
@@ -77,6 +79,8 @@ resetButton.addEventListener("click", () => {
         cell.textContent = '';
         cell.className = 'cell';
     });
-});
+}
 
+// 初始化游戏
+resetGame();
 createBoard();
